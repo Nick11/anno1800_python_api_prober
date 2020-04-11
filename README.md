@@ -21,12 +21,15 @@ It seems Anno 1800 is using a Python API internally. The resourceful brains behi
 
 PYTHON_API.md contains some of my limited insights.
 
-## More useful tools
+## More useful info
 ### quickbms
 quickbms allows you to extract the game data containers (Data0.rda, ..., Patch1.rda) found in *Ubisoft Game Launcher\games\Anno 1800\maindata*.
 
 - Download  quickbms and the Anno5 script from http://aluigi.altervista.org/quickbms.htm
 
 Find an overview of the data-structure here : https://anno1800.fandom.com/wiki/Modding
+
+### assets.xml
+Once extracted from Data0.rda, find ths `asset.xml` at `<data extracted from Data0>\config\export\main\asset`
 
 

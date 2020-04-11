@@ -13,7 +13,7 @@ class Prober:
 				exec(py_file.read(), {'DATA': obj, 'LOG_FILE': self.log_file_path})
 		except Exception as e:
 			print('ERROR:' + str(e))
-			with open(log_file_path, 'a') as log_file:
+			with open(self.log_file_path, 'a') as log_file:
 				log_file.write(str(e)+'\n')
 
 	def pressNine(self):
