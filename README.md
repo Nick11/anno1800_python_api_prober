@@ -11,6 +11,9 @@ It allows you to change the `debugger.py`file while the game is running and writ
 
 ## How to use
 The mod binds the Num Pad keys 7 to 9 to send python objects from the Anno API to the `debugger.py` script (`start_script.py` does that).
+
+Currently Num 7 sends all modules.
+
 You can freely edit the `debugger.py` script while the game is running, the `start_script.py` is loaded during the game startup though.
 
 ## ANNO 1800 Python API

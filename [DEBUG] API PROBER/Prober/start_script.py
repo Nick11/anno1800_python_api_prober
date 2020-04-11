@@ -13,17 +13,17 @@ class Prober:
 				exec(py_file.read(), {'DATA': obj, 'LOG_FILE': self.log_file_path})
 		except Exception as e:
 			print('ERROR:' + str(e))
-			with open(self.src_path+'/error.log', 'a') as log_file:
+			with open(log_file_path, 'a') as log_file:
 				log_file.write(str(e)+'\n')
 
 	def pressNine(self):
-		self.debug(TextSources)
+		self.debug(dirs())
 	
 	def pressEight(self):
-		self.debug(session)	
+		self.debug(locals())	
 	
 	def pressSeven(self):
-		self.debug(scenes)
+		self.debug(globals())
 		#Values ?
 			
 prober = Prober();
