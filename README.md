@@ -20,3 +20,13 @@ You can freely edit the `debugger.py` script while the game is running, the `sta
 It seems Anno 1800 is using a Python API internally. The resourceful brains behind  **Anno 1800 Mod Loader** found a way to tap onto this API.
 
 PYTHON_API.md contains some of my limited insights.
+
+## More useful tools
+### quickbms
+quickbms allows you to extract the game data containers (Data0.rda, ..., Patch1.rda) found in *Ubisoft Game Launcher\games\Anno 1800\maindata*.
+
+- Download  quickbms and the Anno5 script from http://aluigi.altervista.org/quickbms.htm
+
+Find an overview of the data-structure here : https://anno1800.fandom.com/wiki/Modding
+
+
