@@ -1,26 +1,10 @@
 <ModOps>
     <ModOp Type="add" GUID='2001271' Path="/Values/GUIConfig/KeyBindings">
         <Item>
-            <DefaultKey>Keypad 9</DefaultKey>
-            <Command>prober.pressNine()</Command>
+            <DefaultKey>I</DefaultKey>
+            <Command>prober.press()</Command>
             <Text>90001</Text>
             <Active>Session</Active>
         </Item>
     </ModOp>
-	<ModOp Type="add" GUID='2001271' Path="/Values/GUIConfig/KeyBindings">
-    <Item>
-      <DefaultKey>Keypad 8</DefaultKey>
-      <Command>prober.pressEight()</Command>
-      <Text>8855909</Text>
-      <Active>Session</Active>
-    </Item>
-  </ModOp>
-  <ModOp Type="add" GUID='2001271' Path="/Values/GUIConfig/KeyBindings">
-	<Item>
-		<DefaultKey>Keypad 7</DefaultKey>
-		<Command>prober.pressSeven()</Command>
-		<Text>90001</Text>
-		<Active>Session</Active>
-	</Item>
-  </ModOp>
 </ModOps>

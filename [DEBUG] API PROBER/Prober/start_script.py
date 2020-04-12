@@ -16,13 +16,7 @@ class Prober:
 			with open(self.log_file_path, 'a') as log_file:
 				log_file.write(str(e)+'\n')
 
-	def pressNine(self):
-		self.debug(dirs())
-	
-	def pressEight(self):
-		self.debug(locals())	
-	
-	def pressSeven(self):
+	def press(self):
 		self.debug(globals())
 		#Values ?
 			

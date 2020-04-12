@@ -10,9 +10,7 @@ It allows you to change the `debugger.py`file while the game is running and writ
 - Then edit *[DEBUG] API PROBER/Prober/start_script.py"* line 5 `self.src_path = "C:/code/anno1800_modding/src"`, set the `src_path` to the directory, where the `debugger.py` file is.
 
 ## How to use
-The mod binds the Num Pad keys 7 to 9 to send python objects from the Anno API to the `debugger.py` script (`start_script.py` does that).
-
-Currently Num 7 sends all modules.
+The mod binds the "I" key to send all loaded python-modules to the `debugger.py` script (`start_script.py` does that).
 
 You can freely edit the `debugger.py` script while the game is running, the `start_script.py` is loaded during the game startup though.
 
