@@ -2,6 +2,7 @@ class Assets:
 	ALL_ASSETS_XPATH = './/Asset'
 	GUID_XPATH = 'Values/Standard/GUID'
 	NAME_XPATH = 'Values/Standard/Name'
+	ENGLISH_TEXT_XPATH = 'Values/Text/LocaText/English/Text'
 	TEMPLATE_SELECTOR_XPATH = '[Template=\'{}\']'
 	GUID_SELECTOR_XPATH = '/Values/Standard/[GUID=\'{}\']/../..'
 
@@ -44,8 +45,24 @@ class Assets:
 	def get_name(self, guid):
 		return self.get_node_xpath(self.assets[guid], self.NAME_XPATH).text
 		
+	def get_english_text(self, guid):
+		return self.get_node_xpath(self.assets[guid], self.ENGLISH_TEXT_XPATH).text
+		
 if __name__ == '__main__':
 	assets = Assets('D:/programmieren/anno1800-rda/data0/data/config/export/main/asset/assets.xml')
-	for guid in assets.get_product_guids():
-		print("{} => {}".format(guid, assets.get_name(guid)))
+	
+	all_product_guids = assets.get_product_guids()
+	
+	with open('asset_list.py', 'w') as file:
+		file.write('class Products:\n')
+		for guid in all_product_guids:
+			file.write("    {} = {}\n".format(assets.get_name(guid).upper().replace(' ', '_').replace('-', '_'), guid))
+			
+		file.write('\n')
+		
+		file.write("    PRODUCT_INFO = {\n")
+		for guid in all_product_guids:
+			file.write("        {} : {{ \"name\": \"{}\", \"english_text\" : \"{}\" }},\n".format(guid, assets.get_name(guid), assets.get_english_text(guid)))
+		
+		file.write("    }\n")
 	
