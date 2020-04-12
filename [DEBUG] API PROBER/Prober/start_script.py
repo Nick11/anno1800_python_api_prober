@@ -10,7 +10,7 @@ class Prober:
 	def debug(self, obj):
 		try:
 			with open(self.src_path+'/debugger.py', 'r') as py_file:
-				exec(py_file.read(), {'DATA': obj, 'LOG_FILE': self.log_file_path})
+				exec(py_file.read(), {'DATA': obj, 'LOG_FILE': self.log_file_path, 'SRC_PATH': self.src_path})
 		except Exception as e:
 			print('ERROR:' + str(e))
 			with open(self.log_file_path, 'a') as log_file:
