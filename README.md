@@ -30,6 +30,8 @@ Find an overview of the data-structure here : https://anno1800.fandom.com/wiki/M
 ### assets.xml
 Once extracted from Data0.rda, find ths `asset.xml` at `<data extracted from Data0>\config\export\main\asset`
 
+### read_assets.py
+`src/read_asset.py` is a simple parser for the assets.xml that generates a list of all products. (`asset_list.py`)
 
 ### open Anno 1800 console
 Anno 1800 has an in-game console where you can access the Python API.
