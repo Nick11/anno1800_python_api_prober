@@ -6,6 +6,14 @@ from asset_list import Products
 
 def main():
 	wood_id = 120008
+	
+	popIDs = {
+                'farmers': 15000000,
+                'workers': 15000001,
+                'artisans': 15000002,
+                'engineers': 15000003,
+                'investors': 15000004
+                }
 
 	#data = DATA
 
@@ -79,6 +87,7 @@ def main():
 	
 	#data = DATA['logger'].setLevel(3)
 	#openConsole(DATA)
+	#getListofHistoricPop(DATA,popIDs)
 	data = DATA['game'].crash(True)
 	#data = len(data)
 	#data = vars(data)
@@ -87,9 +96,23 @@ def main():
 	log(len(data))
 	log('\n')
 
+
 def log(text):
 	with open(LOG_FILE, 'a') as log_file:
 		log_file.write(str(text)+'\n\n')
+
+def getListofHistoricPop(modules, popIDs):
+        for poptype, popID in popIDs.items():
+                popvalues = []
+                popvalues.append(getHistoricPop(modules, 0, popID))
+                i=1
+                while getHistoricPop(modules, i, popID) > 0:
+                        popvalues.append(getHistoricPop(modules, i, popID))
+                        i=i+1
+                log(poptype+'\n'+''.join(str(popvalues))+'\n'+'---')
+		
+def getHistoricPop(modules, snapshotIndex, popID):
+        return modules['TextSources'].TextSourceRoots.EconomyStatistic.History.GetPopulationAmount(snapshotIndex,popID)
 
 def openConsole(modules):
 	modules['console'].toggleVisibility()
