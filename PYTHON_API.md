@@ -105,3 +105,20 @@ These might be the different screens/Overlays
 - scenes.SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData: "Handelsrouten"
 
 ['Achievement', 'ActiveTrade', 'AdvanceDifficulties', 'AttractivenessPopup', 'BrowserDebug', 'CampaignNewspaper', 'CampaignNotifications', 'CharacterNotifications', 'ChatNotification', 'ChatWindow', 'ConfirmationMenu', 'ConstructionBar', 'CraftingPopup', 'CreateGame', 'Credits', 'CulturalBuildingPopup', 'DLCOverview', 'DLCPromotionPopup', 'DLCUpdate', 'Desync', 'Difficulties', 'DifficultyUpgrade', 'Diplomacy', 'Drag', 'EpilepsyWarning', 'ErrorMessage', 'ExpeditionEvent', 'ExpeditionOverview', 'FadeTransition', 'Feedback', 'GameBlur', 'GameModeSelection', 'GameOver', 'Hint', 'HostileTakeOver', 'IconInfolayer', 'InfluencePopup', 'Intro', 'IslandBar', 'Letterbox', 'Loader', 'Loading', 'MPGameModeSelection', 'MPLobbyCoop', 'MPNotification', 'MPQuickJoinLobby', 'MPQuickJoinWidget', 'MPQuickMatch', 'MPSessionBrowser', 'MPSessionCreate', 'MPWaitingForMatch', 'MainNotifications', 'MetaBackground', 'MilitaryResult', 'Minimap', 'NavigationMenu', 'NewSettingUpdate', 'Newspaper', 'NewspaperSpecialEdition', 'NonModalPopup', 'ObjectMenuBluePrint', 'ObjectMenuCityInstitution', 'ObjectMenuCoalOilHarbour', 'ObjectMenuCommuterHarbour', 'ObjectMenuCultureBuilding', 'ObjectMenuDepartment', 'ObjectMenuForeign', 'ObjectMenuGeneric', 'ObjectMenuGuildHouse', 'ObjectMenuHangar', 'ObjectMenuHarbour', 'ObjectMenuKontor', 'ObjectMenuMarketplace', 'ObjectMenuMausoleum', 'ObjectMenuMilitary', 'ObjectMenuModule', 'ObjectMenuMonument', 'ObjectMenuMonumentEvent', 'ObjectMenuOrnamental', 'ObjectMenuPalace', 'ObjectMenuProduction', 'ObjectMenuPublicService', 'ObjectMenuResidence', 'ObjectMenuShip', 'ObjectMenuShipYard', 'ObjectMenuSpecialist', 'ObjectMenuTrader', 'ObjectMenuTraderOldNate', 'ObjectMenuVisitorHarbor', 'ObjectMenuWarehouse', 'OnScreenHP', 'OnScreenIcon', 'OnScreenProgress', 'OnScreenText', 'Options', 'Palace', 'PauseExplanation', 'PauseMenu', 'PeakEasterEgg', 'PhoenixExport', 'PhotoMarker', 'PostcardExplanation', 'ProfileSelection', 'QuestBook', 'QuestTracker', 'QuickNavigationMap', 'ResourceBar', 'RightclickMenu', 'SaveDialog', 'ScreenCapture', 'Session', 'SessionTradeRouteOverview', 'SessionTradeRoutes', 'SessionTradeTransfer', 'SideNotificationArchives', 'SideNotifications', 'StartMenuVideo', 'StatisticScreen', 'StrategicMap', 'Subtitles', 'Survey', 'SystemBackground', 'SystemPopup', 'TextPopup', 'Title', 'Tooltip', 'TransferGoodsMenu', 'TreasureMap', 'UIPlayground', 'Unloading', 'UplayAction', 'VersionLabel', 'Video', 'VideoBackground', 'WorldMap']
+
+### SessionTradeRouteOverview
+Data for the trade route overviewscreen
+[SceneTransition', 'TradeRouteOverviewObject']
+
+#### TradeRouteOverviewObject
+Data for trade(trade) and charter(transfere) routes
+
+['CloseButtonReleased', 'CoopActiveMarkerData', 'CreateRouteDisabled', 'CreateRouteReleased', 'HasNoCharterRouteSearchResult', 'HasNoTradeRouteSearchResult', 'IsRemoveBtnVisible', 'RemoveSearchTermReleaseEvent', 'RouteData', 'SearchFilter', 'TradeRouteSelect', 'TransferData]
+
+##### RouteData
+
+Array, its elements contain:
+
+['ActiveShips', 'DeleteRouteClicked', 'EditRouteClicked', 'GeneralErrorWarning', 'GoodIcons', 'HasStoppedTrading', 'MouseEntered', 'MouseLeft', 'NoShipsAssigned', 'NotificationAllShipsPaused', 'PausedShips', 'RouteID', 'RouteName', 'WarningNoGoods', 'WarningNoShips']
+
+

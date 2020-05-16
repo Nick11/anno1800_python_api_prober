@@ -1,7 +1,8 @@
-import sys, binascii
+import sys, inspect
 import os
 sys.path.append(SRC_PATH)
 from api_wrapper import api_wrapper as api
+from asset_list import Products
 
 def main():
 	wood_id = 120008
@@ -25,27 +26,60 @@ def main():
 	#data = DATA['TextSources'].TextSourceRoots.GetTradeRoute().GetRoute(10)
 	#data = DATA['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[0].RouteID
 	#data = DATA['scenes'].SessionTradeRoutes.Data.StationData[0].StationName
-	routeIDs = getTradeRouteIDs(DATA)
-	routeID = routeIDs[0]
-	routes = getTradeRoutes(DATA)
-	route = routes[3]
-	data = route.MouseLeft()
+	#routeIDs = getTradeRouteIDs(DATA)
+	#routeID = routeIDs[0]
+	#routes = getTradeRoutes(DATA)
+	#route = routes[0]
 	
-	data = DATA['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[0]
-	data = DATA['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[1]
+	#data = DATA['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[0]
+	#data = DATA['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[1]
 	
 	
-	#openRoute(DATA)
-	modules['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[0]
 	
+	#data = DATA['scenes'].SessionTradeRoutes.SceneTransition.Hide()
+	#data = DATA['scenes'].SessionTradeRouteOverview.SceneTransition.Hide()
+	#for i in range(2,20):
+		#openRoute(DATA,i)
+		#data = DATA['scenes'].SessionTradeRoutes.Data.StationData
+		#log(len(data))
+	#DATA['scenes'].SessionTradeRoutes.Data.CancelButtonReleased()
+	#DATA['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.CloseButtonReleased()
 	
 	#data = DATA['scenes'].SessionTradeRoutes.Data.StationData[1].StationID
+	#data = scenes(DATA).SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[4]
+	#data = DATA['scenes'].SessionTradeRoutes.Data.StationData
 	
+	#data = DATA['gameevents'].onChangeSelection
 	
-	
-	#data = DATA['TextSources'].TextSourceRoots.GetTradeRoute().GetRoute(routeID).GetStation(0)
-	#data = DATA['TextSources'].TextSourceRoots.TradeRoute.GetRoute(routeID)
 	#data = DATA['scenes'].ObjectMenuShip.FleetObject.ActiveItemData
+	#data = DATA['TextSources'].TextSourceRoots.TradeRoute.GetRoute(routeID)
+	
+	#stationID = DATA['scenes'].SessionTradeRoutes.Data.StationData[0].StationID
+	#for prod in Products.PRODUCT_INFO.keys():
+	#for prod in range(10):
+	#	data = DATA['TextSources'].TextSourceRoots.GetTradeRoute().GetRoute(routeID).GetStation(stationID).GetGood(prod).Guid
+		#if data:
+			#pass
+			#log(data)
+			#log(data)
+	#station_name = DATA['scenes'].SessionTradeRoutes.Data.StationData[1].StationName
+	
+	#DATA['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[0].EditRouteClicked()
+	#markers = iter(scenes(DATA).StrategicMap.Data.IslandMarker)
+	#for marker in markers:
+		#log(dir(marker))
+		#log(marker.RefGUID)
+		#pass
+	#data = DATA['TextSources'].TextSourceRoots.GetArea().GetAreaFromID(9026).GetEconomy().GetPopulationCount()
+	#data = scenes(DATA).StrategicMap.Data.RouteLines[0].Start
+	
+	#data = DATA['TextSources'].TextSourceRoots.GetArea().GetCurrent().GetEconomy().CityStatus
+	
+	#data = DATA['scenes'].StatisticScreen.WarehouseData.WarehouseTradeWrapper[0].TradeHeaderBtnObject.RouteName
+	
+	#data = DATA['logger'].setLevel(3)
+	#openConsole(DATA)
+	data = DATA['game'].crash(True)
 	#data = len(data)
 	#data = vars(data)
 	log(data)
@@ -57,6 +91,9 @@ def log(text):
 	with open(LOG_FILE, 'a') as log_file:
 		log_file.write(str(text)+'\n\n')
 
+def openConsole(modules):
+	modules['console'].toggleVisibility()
+	
 def getTradeRoutes(modules):
 	return scenes(modules).SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData
 	
@@ -84,13 +121,19 @@ def iter(self):
 	for i in range(len(self)):
 		yield self[i]
 
+
+def listener():
+	scenes(DATA).SessionTradeRouteOverview.TradeRouteOverviewObject.RouteDat    
 # Notes
 def openCharterRoute(modules):
 	modules['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.TransferData[1].RouteButtonClicked()
-def openRoute(modules):
-	modules['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[0].EditRouteClicked()
+def openRoute(modules, index):
+	modules['scenes'].SessionTradeRouteOverview.TradeRouteOverviewObject.RouteData[index].EditRouteClicked()
 def getCargoForLAstSelectedShip():
 	DATA['scenes'].ObjectMenuShip.ShipObject.CargoSlotData[0].ItemData.ButtonBehaviour.RefGUID
-	
+def openCreateRouteMenu():
+	scenes(DATA).SessionTradeRouteOverview.TradeRouteOverviewObject.TradeRouteSelect
+def islandCoordinates():
+	scenes(DATA).StrategicMap.Data.IslandMarker[0].Position.x
 main()
 
